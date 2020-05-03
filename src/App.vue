@@ -1,17 +1,20 @@
 <template>
     <div class="wrapper">
         <div class="wrapper-content">
-
             <section>
                 <div class="container">
                     <button class="btn btnPrimary" @click="modalFirst = !modalFirst">Show first modal</button>
                     <modals
                         title="First Modal"
-                        v-if="modalFirst"
-                    />
+                        v-show="modalFirst"
+                        @closeModal="modalFirst = false"
+                    >
+                       <div slot="body">
+
+                       </div>
+                    </modals>
                 </div>
             </section>
-
         </div>
     </div>
 </template>
